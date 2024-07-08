@@ -1,0 +1,125 @@
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+
+    <link rel="stylesheet" href="./css/all.min.css" />
+
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+
+  <body class="bg-black">
+    <div class="glowing">
+      <span style="--i: 1"></span>
+
+      <span style="--i: 2"></span>
+
+      <span style="--i: 3"></span>
+    </div>
+
+    <div class="glowing">
+      <span style="--i: 1"></span>
+
+      <span style="--i: 2"></span>
+
+      <span style="--i: 3"></span>
+    </div>
+
+    <div class="glowing">
+      <span style="--i: 1"></span>
+
+      <span style="--i: 2"></span>
+
+      <span style="--i: 3"></span>
+    </div>
+
+    <div class="glowing">
+      <span style="--i: 1"></span>
+
+      <span style="--i: 2"></span>
+
+      <span style="--i: 3"></span>
+    </div>
+
+    <main class="container">
+      <header class="pt-3 book-inputs mb-3">
+        <h1 class="text-center fw-bold text-white py-2">Bookmarker App</h1>
+        <section class="book-custom rounded-3 p-4 vstack gap-4 shadow-lg">
+          <div>
+            <label for="siteName" class="form-label text-light mb-2"
+              >Site Name:</label
+            >
+            <input
+              type="text"
+              class="form-control mb-3"
+              id="siteName"
+              placeholder="BookMark Name..."
+            />
+            <p class="alert alert-danger d-none" id="alertName">
+              Name Is Required
+            </p>
+          </div>
+
+          <div>
+            <label for="siteUrl" class="form-label text-light mb-2"
+              >Site URL:</label
+            >
+            <input
+              type="url"
+              class="form-control mb-2"
+              id="siteUrl"
+              placeholder="Website URL..."
+            />
+            <p class="alert alert-danger d-none" id="alertUrl">
+              Url Is Required
+            </p>
+            <p class="alert alert-danger d-none" id="alertInvalid">
+              Url Is Invalid
+            </p>
+          </div>
+
+          <button
+            class="btn btn-primary mt-4 w-100"
+            id="btnAdd"
+            onclick="AddBookMark()"
+          >
+            Add Bookmark
+          </button>
+          <button class="btn btn-warning mt-5 d-none" id="btnUpdate">
+            Update Bookmark
+          </button>
+        </section>
+      </header>
+
+      <section class="book-data py-2">
+        <input
+          type="search"
+          class="form-control form-control-sm w-50 mx-auto mb-3"
+          placeholder="Search..."
+          id="searchBook"
+          oninput="search(this.value)"
+        />
+
+        <div class="table-responsive book-custom p-3">
+          <table class="table table-sm mb-0 text-nowrap table-info text-center">
+            <thead>
+              <tr>
+                <th scope="col">Name</th>
+                <th scope="col">URL</th>
+                <th scope="col">Action</th>
+              </tr>
+            </thead>
+            <tbody id="tableBody">
+              <th></th>
+              <th></th>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/main.js"></script>
+  </body>
+</html>
